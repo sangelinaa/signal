@@ -1,0 +1,380 @@
+@import url("../fonts/fonts.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 300 20px "mulish", sans-serif;
+    
+}
+
+.content {
+    width: 1296px;
+    margin: 0px auto;
+}
+
+header {
+    background: #FAFAFE;
+}
+
+main {
+    background: #FAFAFE;
+}
+
+footer {
+    background: #0089A6;
+    padding: 19px 0 52px;
+    color: #FFFFFF;
+}
+
+/* Меню (Логотип и эконки) */
+
+.head_wrapper {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    padding-bottom: 14px;
+}
+
+.head_icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Меню навигации */
+
+.content_nav {
+    width: 1090px;
+    margin: 0px auto;
+    
+}
+
+.wrapper_nav {
+    height: 64px;
+    background: #F2790F;
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.nav_link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+    padding-left: 20px;
+    /* необходим для формирования позиций линий */
+    position: relative;
+    /* блок будет занимать ширину по размеру контента в нём*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_link::before {
+    content: " ";
+    background: #FAFAFE;
+    width: 1px;
+    height: 50px;
+    /* линия смещена на 10px слева от текста*/
+    left: -100px;
+    /* включаем абсолютное позиционирование относительно блока с relative */
+    position: absolute;
+}
+
+.nav_link::after {
+    content: " ";
+    background: #FAFAFE;
+    width: 1px;
+    height: 50px;
+    /* линия смещена на 10px справа от текста*/
+    right: -100px;
+    /* включаем абсолютное позиционирование относительно блока с relative */
+    position: absolute;
+}
+
+/* Hero place */
+
+.hero {
+    background: url("../images/hero-image.png");
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    width: 100%;
+    height: 656px;
+    left: 0px;
+    top: 128px;
+}
+
+.hero_text {
+    height: 324px;
+    padding-top: 272px;
+}
+
+.hero_title {
+    width: 600px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 56px;
+    color: #FFFFFF;
+}
+
+.hero_info {
+    width: 736px;
+    padding-top: 24px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+/* Последние объекты автоматизации */
+
+.review {
+    padding-top: 688px;
+}
+
+.title {
+    margin-bottom: 26px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 60px;
+    color: #0089A6;
+}
+
+.review_grid {
+    display: grid;
+    grid-template: auto 1fr / auto 1fr auto;
+    grid-template-areas: 
+    "image title"
+    "image text";
+    margin-bottom: 16px;
+    column-gap: 36.34px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+.review_image {
+    grid-area: image;
+}
+
+.review_title {
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    grid-area: title;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.review_text {
+    grid-area: text;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.review_link {
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+/* Преимущества */
+
+.advantages {
+}
+
+.title {
+}
+
+.advantages_wrapper {
+    display: flex;
+    margin: 0 auto;
+}
+
+.info_block {
+    width: 416px;
+    margin-right: 24px;
+}
+
+.info_block:last-child {
+    margin-right: 0;
+}
+
+hr {
+    border: 2px solid #EB7C1C;
+}
+
+.info_item {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 24px;
+    
+}
+
+.info_img {
+    width: 86px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.info_titile {
+    width: 355px;
+    margin: auto;
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 17px;
+}
+
+.info_text {
+    padding-bottom: 40px;
+    width: 316px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 54px;
+
+}
+
+/* Футер */
+ul {
+    list-style-type: none;
+    width: 350px;
+}
+
+.content_footer {
+    width: 1146px;
+    margin: 0px auto;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer_menu_list {
+    margin-right: 55px;
+}
+
+.footer_menu_list:last-child {
+    margin-right: 0;
+}
+
+.footer_menu_item {
+    list-style: none;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.footer_menu_item + .footer_menu_item {
+    padding-top: 4px;
+}
+
+.footer_menu_title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.footer_menu_title_add {
+    padding-top: 30px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.footer_menu_link {
+    
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.content_icons {
+}
+
+.footer_icons {
+    display: flex;
+    justify-content: center;
+}
+
+.hr-line {
+    border: none;
+	border-top: 0.1px solid #FFFFFF;
+}
+
+.footer_copy_text {
+    margin-top: 63px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Кнопка наверх */
+
+.btn-up {
+    position: fixed; 
+    background-color: rgba(15, 202, 242, 0.32); 
+    right: 70px; 
+    bottom: 30px; 
+    border-radius: 40px;
+    cursor: pointer; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+    width: 75px;
+    height: 75px;
+    opacity: 1;
+}
+
+.btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17V4M3 10l7-7 7 7'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+.btn-up_hiding {
+    opacity: 0;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+      background-color: #0089A6; /* цвет заднего фона при наведении */
+    }
+}
+
